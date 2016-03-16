@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall":"cp node_modules/normalize.css/normalize.css src/scss/_normalize.scss",
+    "postinstall": "cp node_modules/normalize.css/normalize.css src/scss/_normalize.scss",
     "watch": "sass --watch src/scss:build"
   },
   "author": "",
@@ -12,5 +12,9 @@
   "description": "",
   "devDependencies": {
     "normalize.css": "^3.0.3"
+  },
+  "dependencies": {
+    "backbone": "^1.3.2",
+    "jquery": "^2.2.1"
   }
 }

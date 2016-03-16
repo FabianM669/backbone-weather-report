@@ -7,6 +7,31 @@
     <link rel="stylesheet" type="text/css" href="build/main.css">
 </head>
 <body>
-<script src ="src/js/main.js"></script>
+    <input id="input" placeholder="Input City ID"></input>
+    <span><button>Submit</button></span>
+    <h1 id="city"></h1>
+    <div class="cityInfo"></div>
+    <div class="main"></div>
+
+
+
+
+    <script id="weatherTemplate" type="text/template">
+        <ul class="temp">
+            <li class="weatherDescription">The weather for: <span><%= new Date(get("dt") * 1000).toDateString() %></span> is <%= get("weather")[0].description %></li>
+            <li class="temp">Lo: <%= get("temp").min %> &#8457</li>
+            <li class="temp">High: <%= get("temp").max %> &#8457</li>
+            <li class="humidity">Humidity: <%= get("humidity") %></li>
+            <li class="wind">Wind Speed: <%= get("speed") %> <%= get("deg") %></li>
+        </ul>
+    </script>
+    <script id="cityTemplate" type="text/template">
+        <h1><%= get("name") %></h1>
+    </script>
+
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="node_modules/underscore/underscore.js"></script>
+    <script type="text/javascript" src="node_modules/backbone/backbone.js"></script>
+    <script type="text/javascript" src="src/js/main.js"></script>
 </body>
 </html>
