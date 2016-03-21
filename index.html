@@ -13,6 +13,11 @@
     <div class="cityInfo"></div>
     <div class="main"></div>
 
+    <script id="avgsTemplate" type="text/template">
+        <ul class="avgs">
+            <li class="avgWeatherDescription">Average Weather Description: <%= get()
+    </script>
+
 
 
 
@@ -23,6 +28,7 @@
             <li class="temp">High: <%= get("temp").max %> &#8457</li>
             <li class="humidity">Humidity: <%= get("humidity") %></li>
             <li class="wind">Wind Speed: <%= get("speed") %> <%= get("deg") %></li>
+            <li class="avgWeatherDescript">Avg Weather Description: <%= get 
         </ul>
     </script>
     <script id="cityTemplate" type="text/template">
